@@ -37,10 +37,22 @@ carousel.addEventListener("mousemove", (e) => {
   carousel.scrollLeft = scrollLeft - walk;
 });
 
-// Like toggle
-document.querySelectorAll('.like-btn').forEach(btn => {
-  btn.addEventListener('click', e => {
+// Hover expansion + squeeze others
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    cards.forEach(c => c.classList.remove("expanded"));
+    card.classList.add("expanded");
+  });
+
+  card.addEventListener("mouseleave", () => {
+    cards.forEach(c => c.classList.remove("expanded"));
+  });
+
+  const likeBtn = card.querySelector(".like-btn");
+  likeBtn.addEventListener("click", (e) => {
     e.stopPropagation();
-    btn.classList.toggle('liked');
+    likeBtn.classList.toggle("liked");
   });
 });

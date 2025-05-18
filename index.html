@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Character Carousel</title>
+  <title>Movie Carousel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,43 +11,46 @@
     <button class="nav-btn" id="prevBtn">←</button>
     
     <div class="carousel" id="carousel">
-      <div class="card" style="background-color:#e94e77;">
-        <img class="character-img" src="images/c1.png" alt="Rosetta" />
-        <div class="text-content">
+      <div class="card" data-title="Rosetta" data-genre="Tinkerbell" data-character="https://via.placeholder.com/100x100.png?text=Rosetta">
+        <img class="poster" src="images/movie1.jpg" alt="Poster">
+        <img class="character-img" src="images/c1.png" />
+        <div class="info">
           <h3>Rosetta</h3>
           <p>Movie: Tinkerbell</p>
           <button class="like-btn">♥</button>
         </div>
       </div>
 
-      <div class="card" style="background-color:#3b5998;">
-        <img class="character-img" src="images/c2.png" alt="Sadness" />
-        <div class="text-content">
+      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
+        <img class="poster" src="images/movie2.jpg" alt="Poster">
+        <img class="character-img" src="images/c2.png" />
+        <div class="info">
           <h3>Sadness</h3>
           <p>Movie: Inside Out</p>
           <button class="like-btn">♥</button>
         </div>
       </div>
 
-      <div class="card" style="background-color:#4caf50;">
-        <img class="character-img" src="images/c3.png" alt="Disgust" />
-        <div class="text-content">
-          <h3>Disgust</h3>
+      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
+        <img class="poster" src="images/movie3.jpg" alt="Poster">
+        <img class="character-img" src="images/c3.png" />
+        <div class="info">
+          <h3>Sadness</h3>
           <p>Movie: Inside Out</p>
           <button class="like-btn">♥</button>
         </div>
       </div>
 
-      <div class="card" style="background-color:#4caf50;">
-        <img class="character-img" src="images/c4.png" alt="Disgust" />
-        <div class="text-content">
-          <h3>Disgust</h3>
+      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
+        <img class="poster" src="images/movie4.jpg" alt="Poster">
+        <img class="character-img" src="images/c4.png" />
+        <div class="info">
+          <h3>Sadness</h3>
           <p>Movie: Inside Out</p>
           <button class="like-btn">♥</button>
         </div>
       </div>
-
-      <!-- Add more cards here -->
+      <!-- Add more cards as needed -->
     </div>
 
     <button class="nav-btn" id="nextBtn">→</button>
