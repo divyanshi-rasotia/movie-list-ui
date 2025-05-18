@@ -1,5 +1,3 @@
-
-
 const cards = document.querySelectorAll('.card');
 const background = document.getElementById('background');
 const movieInfo = document.getElementById('movieInfo');

@@ -60,6 +60,8 @@ body {
   height: 100vh;
   padding: 40px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 .movie-info {
@@ -79,23 +81,23 @@ body {
   color: white;
   max-width: 600px;
   animation: fadeIn 0.5s ease;
-  margin-top: 120px; /* Move the block lower */
+  margin-top: 120px; 
 }
 
 .movie-title {
-  font-size: 3.2rem; /* Bigger title */
+  font-size: 3.2rem; 
   font-weight: bold;
   margin-bottom: 12px;
 }
 
 .movie-meta {
-  font-size: 1.1rem; /* Bigger metadata text */
+  font-size: 1.1rem; 
   color: #ccc;
   margin-bottom: 20px;
 }
 
 .movie-description {
-  font-size: 1.2rem; /* Bigger paragraph */
+  font-size: 1.2rem; 
   line-height: 1.6;
   margin-bottom: 25px;
 }
@@ -130,8 +132,9 @@ body {
   color:white;
   background-color: black;
 }
+
 .carousel {
-position: absolute;
+  position: absolute;
   bottom: 20px;
   right: 70px;
   display: flex;
@@ -140,9 +143,11 @@ position: absolute;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   backdrop-filter: blur(10px);
-  max-width: 80vw;
+  max-width: 448px;
   white-space: nowrap;
   scroll-behavior: smooth;
+  overflow-x: visible;
+  z-index:2;
 }
 .carousel::-webkit-scrollbar{
     display: none;
@@ -151,7 +156,6 @@ position: absolute;
     min-width: 100px;
   width: 100px;
   height: 150px;
-  overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
