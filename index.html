@@ -7,53 +7,51 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="carousel-wrapper">
-    <button class="nav-btn" id="prevBtn">←</button>
+  <nav class="navbar">
+  <div class="logo">MyMovieApp</div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Movies</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+  <div class="background" id="background"></div>
+
+  <div class="content">
+    <div class="movie-info" id="movieInfo">
+      <h2>Select a Movie</h2>
+      <p>Click a card to view details here.</p>
+    </div>
     
     <div class="carousel" id="carousel">
-      <div class="card" data-title="Rosetta" data-genre="Tinkerbell" data-character="https://via.placeholder.com/100x100.png?text=Rosetta">
-        <img class="poster" src="images/movie1.jpg" alt="Poster">
-        <img class="character-img" src="images/c1.png" />
-        <div class="info">
-          <h3>Rosetta</h3>
-          <p>Movie: Tinkerbell</p>
-          <button class="like-btn">♥</button>
-        </div>
-      </div>
+      <div class="card" data-title="Tangled" data-description="Rapunzel, an innocent, young girl, is locked up by her overly protective mother. Her wish to escape into the world outside finally comes true when she meets the good-hearted thief, Flynn." data-bg="images/poster1.jpg"
+       data-year="2010"
+       data-director="Nathan Grenom and Byron Howard">
 
-      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
-        <img class="poster" src="images/movie2.jpg" alt="Poster">
-        <img class="character-img" src="images/c2.png" />
-        <div class="info">
-          <h3>Sadness</h3>
-          <p>Movie: Inside Out</p>
-          <button class="like-btn">♥</button>
-        </div>
+       <img src="images/movie1.jpg" alt="Tangled Poster"/>
       </div>
+      <div class="card" data-title="Venom" data-description="While trying to take down Carlton, the CEO of Life Foundation, Eddie, a journalist, investigates experiments of human trials. Unwittingly, he gets merged with a symbiotic alien with lethal abilities." 
+      data-year="2018"
+       data-director="Ruben Fleischer"
+       data-seasons="1"
+       data-bg="images/poster2.jpg">
+        <img src="images/movie2.jpg" alt="Venom Poster"/>
+      </div>
+      <div class="card" data-title="Beauty and the Beast" data-description="A village girl embarks on a journey to save her father from a creature that has locked him in his dungeon. Eventually, she learns that the creature is a prince who has been cursed." 
+      data-year="2017"
+       data-director="Bill Condon"
+       data-bg="images/poster3.jpg">
 
-      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
-        <img class="poster" src="images/movie3.jpg" alt="Poster">
-        <img class="character-img" src="images/c3.png" />
-        <div class="info">
-          <h3>Sadness</h3>
-          <p>Movie: Inside Out</p>
-          <button class="like-btn">♥</button>
-        </div>
+     <img src="images/movie3.jpg" alt="Beauty and the Beast Poster"/>
       </div>
-
-      <div class="card" data-title="Sadness" data-genre="Inside Out" data-character="https://via.placeholder.com/100x100.png?text=Sadness">
-        <img class="poster" src="images/movie4.jpg" alt="Poster">
-        <img class="character-img" src="images/c4.png" />
-        <div class="info">
-          <h3>Sadness</h3>
-          <p>Movie: Inside Out</p>
-          <button class="like-btn">♥</button>
-        </div>
+      <div class="card" data-title="Harry Potter and the Philosopher's stone" data-description="Harry Potter, an eleven-year-old orphan, discovers that he is a wizard and is invited to study at Hogwarts. Even as he escapes a dreary life and enters a world of magic, he finds trouble awaiting him." 
+      data-year="2001"
+       data-director="Chris Columbus"
+       data-bg="images/poster4.jpg">
+        <img src="images/movie4.jpg" alt="Harry Potter Poster"/>
       </div>
-      <!-- Add more cards as needed -->
     </div>
-
-    <button class="nav-btn" id="nextBtn">→</button>
   </div>
 
   <script src="script.js"></script>

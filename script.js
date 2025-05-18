@@ -1,58 +1,52 @@
-const carousel = document.getElementById("carousel");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
 
-// Scroll buttons
-prevBtn.addEventListener("click", () => {
-  carousel.scrollBy({ left: -250, behavior: "smooth" });
-});
 
-nextBtn.addEventListener("click", () => {
-  carousel.scrollBy({ left: 250, behavior: "smooth" });
-});
+// const cards = document.querySelectorAll('.card');
+// const background = document.getElementById('background');
+// const movieInfo = document.getElementById('movieInfo');
 
-// Drag-to-scroll
-let isDown = false;
-let startX, scrollLeft;
+// cards.forEach(card => {
+//   card.addEventListener('mouseenter', () => {
+//     const bg = card.getAttribute('data-bg');
+//     const title = card.getAttribute('data-title');
+//     const description = card.getAttribute('data-description');
 
-carousel.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-});
+//     background.style.backgroundImage = `url(${bg})`;
+//     movieInfo.innerHTML = `<h2>${title}</h2><p>${description}</p>`;
+//   });
+// });
 
-carousel.addEventListener("mouseleave", () => {
-  isDown = false;
-});
-
-carousel.addEventListener("mouseup", () => {
-  isDown = false;
-});
-
-carousel.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 2;
-  carousel.scrollLeft = scrollLeft - walk;
-});
-
-// Hover expansion + squeeze others
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll('.card');
+const background = document.getElementById('background');
+const movieInfo = document.getElementById('movieInfo');
 
 cards.forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    cards.forEach(c => c.classList.remove("expanded"));
-    card.classList.add("expanded");
-  });
+  card.addEventListener('mouseenter', () => {
+    const bg = card.getAttribute('data-bg');
+    const title = card.getAttribute('data-title');
+    const year = card.getAttribute('data-year');
+    const director = card.getAttribute('data-director');
+    const description = card.getAttribute('data-description');
 
-  card.addEventListener("mouseleave", () => {
-    cards.forEach(c => c.classList.remove("expanded"));
-  });
+    background.style.backgroundImage = `url(${bg})`;
 
-  const likeBtn = card.querySelector(".like-btn");
-  likeBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    likeBtn.classList.toggle("liked");
+    movieInfo.innerHTML = `
+      <div class="movie-details">
+        <h1 class="movie-title">${title}</h1>
+        <div class="movie-meta">
+          <span>${year}</span> |
+          <span><strong>DIRECTOR:</strong> ${director}</span> 
+        </div>
+        <p class="movie-description">${description}</p>
+        <div class="movie-actions">
+          <button class="stream-btn">STREAM NOW</button>
+          <button class="like-btn">♥</button>
+        </div>
+      </div>
+    `;
+
+    const likeBtn = movieInfo.querySelector('.like-btn');
+    likeBtn.addEventListener('click', () => {
+      likeBtn.classList.toggle('liked');
+    });
   });
 });
