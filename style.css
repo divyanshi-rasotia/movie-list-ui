@@ -46,6 +46,7 @@ body {
 .background {
   position: fixed;
   inset: 0;
+  background-image: url('images/default1.jpg');
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
@@ -66,7 +67,14 @@ body {
   color: white;
   padding: 40px;
 }
-
+.movie-info h2{
+  font-size: 40px;
+  margin-top:180px;
+}
+.movie-info p{
+  font-size: 20px;
+  margin-top: -15px;
+}
 .movie-details {
   color: white;
   max-width: 600px;
@@ -96,7 +104,32 @@ body {
   font-size: 1rem;
   padding: 12px 20px;
 }
+.like-btn{
+  background:none;
+  border:none;
+  font-size: 3rem;
+  color: white;
+  cursor:pointer;
+  outline:none;
+}
+.like-btn.liked{
+  transform:scale(2);
+  color:red;
+}
 
+.stream-btn{
+  background-color: #d2d2d2;
+  color: black;
+  border:none;
+  border-radius: 25px;
+  padding:12px 22px;
+  font-weight: bold;
+  cursor:pointer;
+}
+.stream-btn:hover{
+  color:white;
+  background-color: black;
+}
 .carousel {
 position: absolute;
   bottom: 20px;
